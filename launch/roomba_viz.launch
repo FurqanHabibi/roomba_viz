@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- Teleoperation -->
+  <node pkg="joy" type="joy_node" name="joy_node"/>
+  <rosparam command="load" file="$(find raspimouse_kaigi)/config/teleop.yaml" />
+  <node pkg="teleop_twist_joy" type="teleop_node" name="teleop_node">
+  </node>
+
+</launch>
